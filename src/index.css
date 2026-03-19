@@ -1,0 +1,106 @@
+/* ── Yosapp Design System ───────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Tokens ──────────────────────────────────────────────────── */
+:root {
+  color-scheme: dark;
+
+  --bg-base:    #0A0A0C;
+  --bg-surface: #141417;
+  --bg-raised:  #1A1A1F;
+  --bg-hover:   #222228;
+
+  --border:     rgba(255,255,255,0.07);
+  --border-md:  rgba(255,255,255,0.12);
+
+  --text-primary:   rgba(255,255,255,0.92);
+  --text-secondary: rgba(255,255,255,0.45);
+  --text-muted:     rgba(255,255,255,0.22);
+
+  --accent:     #FF4D00;
+  --accent-dim: rgba(255,77,0,0.12);
+  --accent-brd: rgba(255,77,0,0.30);
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-md); }
+
+/* ── Range input ─────────────────────────────────────────────── */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background: var(--bg-raised);
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+}
+input[type=range]::-moz-range-thumb {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+}
+
+/* ── Utilities ───────────────────────────────────────────────── */
+.safe-pb  { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.no-select { user-select: none; -webkit-user-select: none; }
+
+/* Flat button base */
+.btn-flat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.btn-flat:hover {
+  color: var(--text-primary);
+  border-color: var(--border-md);
+  background: var(--bg-hover);
+}
+.btn-accent {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.btn-accent:hover { background: #E04500; border-color: #E04500; }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="#0A0A0C"/>
+  <!-- Accent block -->
+  <rect x="80" y="80" width="352" height="352" rx="16" fill="#FF4D00"/>
+  <!-- Y wordmark -->
+  <text x="256" y="296" text-anchor="middle"
+    font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif"
+    font-size="220" font-weight="600" fill="#0A0A0C"
+    letter-spacing="-8">Y</text>
+</svg>

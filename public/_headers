@@ -1,0 +1,20 @@
+# Service Worker をサブパスで受け取れるようにする
+/sw.js
+  Cache-Control: no-cache
+  Service-Worker-Allowed: /
+
+/workbox-*.js
+  Cache-Control: no-cache
+
+# アプリアセット
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# アイコン
+/icons/*
+  Cache-Control: public, max-age=86400
+
+# Manifest
+/*.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: no-cache
